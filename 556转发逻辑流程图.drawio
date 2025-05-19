@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" version="26.2.13">
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" version="27.0.6">
   <diagram id="5jEfxVwqZtwkkLB00oML" name="Page-1">
-    <mxGraphModel dx="1748" dy="971" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1985" dy="971" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -82,14 +82,23 @@
             <mxPoint y="-12" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="xRpIABg2I_OMiTRP1_z1-4" value="这里增加了“发命令”后5分钟内&lt;div&gt;收到上报的数据才解析转发。&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;labelBackgroundColor=none;fontColor=#143642;" vertex="1" parent="1">
-          <mxGeometry x="-401" y="41" width="177" height="41" as="geometry" />
+        <mxCell id="xRpIABg2I_OMiTRP1_z1-4" value="“发命令超时5分钟”不转发" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;labelBackgroundColor=none;fontColor=#143642;" parent="1" vertex="1">
+          <mxGeometry x="-446" y="44" width="153" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="xRpIABg2I_OMiTRP1_z1-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;" edge="1" parent="1" source="xRpIABg2I_OMiTRP1_z1-7" target="sxp22dgJaoITWx5tHbdO-5">
+        <mxCell id="xRpIABg2I_OMiTRP1_z1-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;" parent="1" source="xRpIABg2I_OMiTRP1_z1-7" target="sxp22dgJaoITWx5tHbdO-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="xRpIABg2I_OMiTRP1_z1-7" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;strokeColor=#0F8B8D;fontColor=#143642;fillColor=#FAE5C7;rotation=90;" vertex="1" parent="1">
-          <mxGeometry x="-215" y="-77" width="20" height="188" as="geometry" />
+        <mxCell id="xRpIABg2I_OMiTRP1_z1-7" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;strokeColor=#0F8B8D;fontColor=#143642;fillColor=#FAE5C7;rotation=90;size=0.5;" parent="1" vertex="1">
+          <mxGeometry x="-215" y="-127" width="20" height="289" as="geometry" />
+        </mxCell>
+        <mxCell id="1OVgLaUYHCrjpHC6Mpth-5" value="报文前缀识别" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-105" y="41" width="90" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="1OVgLaUYHCrjpHC6Mpth-14" value="但是会出现：&lt;br&gt;因信号问题，消息延迟下发/上传，设备响应了报文，但“超时5min机制”限制平台展示" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-438" y="77" width="463" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="1OVgLaUYHCrjpHC6Mpth-19" value="&lt;span style=&quot;text-wrap: nowrap;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;还需要再增加消息确认机制：&lt;/font&gt;&lt;/span&gt;&lt;div style=&quot;text-wrap: nowrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;方案一、改程序，&lt;/span&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;增加上传消息确认机制，参考TCP三次握手&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-wrap: nowrap;&quot;&gt;&lt;font size=&quot;3&quot;&gt;方案二、北斗厂家修改间隔10分钟清空消息队列&lt;/font&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.roundRectCallout;dx=30;dy=15;size=5;boundedLbl=1;" vertex="1" parent="1">
+          <mxGeometry x="-374" y="152" width="460" height="81" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
